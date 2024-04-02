@@ -4,7 +4,7 @@ import { validadeToken } from "../middleware/auth";
 
 const router = express.Router();
 
-router.get("/", validadeToken, getEvents);
+router.get("/?page", validadeToken, getEvents);
 router.get("/join/:id", validadeToken, joinEvent);
 
 export default router;
